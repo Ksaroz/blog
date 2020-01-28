@@ -1,0 +1,3 @@
+hashtag_cloud_co_admin:
+  resource: "@HashtagCloudCoAdminBundle/Resources/config/routing.yml"
+  prefix: /

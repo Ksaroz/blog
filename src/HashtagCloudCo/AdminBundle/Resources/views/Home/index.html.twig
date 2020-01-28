@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+   <h1 class="text-center mx-auto my-5 text-danger">Welcome To My Blog</h1>
+
+    <div class="text-center">
+    <button class="btn btn-primary btn-group btn-group-justified">
+        <a class="text-light" href="{{ path('login') }}">Login</a>
+    </button>
+
+    <button class="btn btn-primary btn-group btn-group-justified">
+        <a class="text-light" href="{{ path('Home_reg') }}">Register</a>
+    </button>
+    </div>
+{% endblock %}

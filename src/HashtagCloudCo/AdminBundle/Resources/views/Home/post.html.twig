@@ -1,0 +1,51 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <button class="btn btn-secondary btn-info pull-right">
+        <a class="text-warning" href="{{ path('logout') }}">Logout</a>
+    </button>
+    <h1 class="text-center my-5 text-danger">Blog Post</h1>
+    <table id="table" class="table">
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>POST_NAME</th>
+            <th>POST_AUTHOR</th>
+            <th>POST_BODY</th>
+            <th>ACTIONS</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for post in viewPost %}
+            <tr>
+                <td> {{ post.id }} </td>
+                <td> {{ post.postName }} </td>
+                <td><a href="{{ path('post_show') }}">{{ post.postAuthor }}</a></td>
+                <td> {{ post.postBody }} </td>
+                <td>
+                    <a class="delete-post btn btn-danger text-light" data-id="{{ post.id }}" href="#">Delete</a>
+                </td>
+            </tr>
+
+
+        {% endfor %}
+
+        </tbody>
+    </table>
+
+    <button class="btn btn-primary btn-info pull-right">
+        <a class="text-light" href="/post/new">Create New Post</a>
+    </button>
+
+
+
+
+    <div></div>
+    <div></div>
+{% endblock %}
+
+{% block javascripts %}
+
+    <script src="/js/main.js"></script>
+
+{% endblock %}

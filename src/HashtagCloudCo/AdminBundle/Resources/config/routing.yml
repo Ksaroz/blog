@@ -1,0 +1,56 @@
+Home_index:
+  path: /
+  defaults: { _controller: "HashtagCloudCoAdminBundle:Home:index" }
+  methods: GET
+
+Home_post:
+  path: /post
+  defaults: { _controller: "HashtagCloudCoAdminBundle:Post:post" }
+  methods: GET
+
+Home_new:
+  path: /post/new
+  defaults: { _controller: "HashtagCloudCoAdminBundle:Home:new"}
+  methods: POST|GET
+
+delete:
+  path: /post/delete/{id}
+  defaults: { _controller: "HashtagCloudCoAdminBundle:Post:delete" }
+  methods: DELETE
+
+post_show:
+  path: /post/show
+  defaults: { _controller: "HashtagCloudCoAdminBundle:Post:show"}
+  requirements:
+  #    id: '\d+'
+  methods: GET
+
+
+Home_admin:
+  path: /admin
+  defaults: { _controller: "HashtagCloudCoAdminBundle:Home:admin"}
+  methods: GET
+
+Home_reg:
+  path: /reg
+  defaults: { _controller: "HashtagCloudCoAdminBundle:Registration:reg"}
+  methods: POST|GET
+
+login:
+  path: /login
+  defaults: { _controller: "HashtagCloudCoAdminBundle:Login:login"}
+  methods: GET|POST
+
+logout:
+  path: /logout
+
+Home_about:
+  path: /about
+  defaults: { _controller: "HashtagCloudCoAdminBundle:Home:about" }
+  methods: GET
+
+Home_service:
+  path: /service
+  defaults: { _controller: "HashtagCloudCoAdminBundle:Home:service" }
+  methods: GET
+
